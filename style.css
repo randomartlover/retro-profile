@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Goldman&family=PT+Sans&family=Sigmar+One&family=Source+Sans+Pro&display=swap');
+body {
+  background-color: #ebe5d3;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main right right';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  border-bottom: 1px dashed #c7c4bd;
+  margin-right: 20px;
+}
+
+.banner-key {
+  transform: rotate(10deg);
+  font-family: 'Sigmar One', cursive;
+}
+
+.header-container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 15px auto;
+  border-bottom: 2px solid #c7c4bd;
+}
+
+.right-panel-header {
+  background: #312f2f;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.right-panel a {
+  text-decoration: none;
+  color: #686868;
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+  margin: 10px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.right-panel a:hover {
+  font-size: large;
+  color: red;
+}
+
+.right-panel p {
+  margin: 10px;
+}
+
+h5 {
+  font-family: 'Goldman', cursive;
+  font-size: 15px;
+  margin: 0 10px;
+}
+
+.main-panel {
+  border-right: 2px solid #c7c4bd;
+  grid-area: main;
+}
+
+.right-panel {
+  grid-area: right;
+}
+
+h1 {
+  font-family: 'Sigmar One', cursive;
+  display: flex;
+  align-items: center;
+}
+
+.banner {
+  display: flex;
+}
+
+h4 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.filter-tv {
+  filter: brightness(0.5);
+  width: 50%;
+  margin-right: 20px;
+}
+
+h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.fab {
+  color: #424141;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  filter: grayscale(.7);
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+
+.avatar:hover {
+  transform: rotate(30deg);
+}
+
+.credits-container, .credits-container > p{
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+  width: 95%;
+  margin-top: 60px;
+}
+
+footer > ul {
+  list-style: none;
+  display: flex;
+  padding-left: 10px;
+}
+
+footer i {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+
+footer i:hover {
+  color: red;
+}
+
+
+.header-container > div {
+  display: flex;
+  align-items: center;
+}
+
+.date-container {
+  background-color: #322f2f;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.date-container p {
+  margin: 4px 0;
+}
+
+.date-container p:nth-child(1) {
+  border-bottom: 2px dotted white;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 1280px) {
+  .container, .header-container {
+    width: 80%
+  }
+}
+
+@media (max-width: 1200px) {
+  .container, .header-container {
+    width: 95%
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-areas: initial ;
+  }
+
+  .main-panel, .right-panel {
+    grid-area: initial;
+  }
+
+  .main-panel {
+    border: none;
+  }
+
+  .card {
+    margin-left: 20px
+  }
+}
+
+@media (max-width: 650px) {
+  .card {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .banner h4{
+    font-size: 15px;
+  }
+}
